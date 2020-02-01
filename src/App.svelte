@@ -8,14 +8,6 @@
     (numPersons * numCoffees * parseFloat(type) * parseInt(days)) / 1000;
 </script>
 
-{@debug numPersons}
-
-<style>
-  h1 {
-    color: purple;
-  }
-</style>
-
 <form class="">
   <div class="flex flex-wrap mb-6">
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">

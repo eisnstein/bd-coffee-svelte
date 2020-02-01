@@ -4,6 +4,11 @@ const path = require("path");
 const mode = process.env.NODE_ENV || "development";
 const prod = mode === "production";
 
+const purgecss = require("@fullhuman/postcss-purgecss")({
+  content: ["./src/**/*.svelte"],
+  defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+});
+
 module.exports = {
   entry: {
     bundle: ["./src/main.js"]
@@ -41,13 +46,7 @@ module.exports = {
            * */
           prod ? MiniCssExtractPlugin.loader : "style-loader",
           { loader: "css-loader", options: { importLoaders: 1 } },
-          {
-            loader: "postcss-loader",
-            options: {
-              ident: "postcss",
-              plugins: [require("tailwindcss"), require("autoprefixer")]
-            }
-          }
+          "postcss-loader"
         ]
       }
     ]
