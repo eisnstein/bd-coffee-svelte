@@ -1,17 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf8'>
-  <meta name='viewport' content='width=device-width'>
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width" />
 
-  <title>Svelte app</title>
+    <title>Bohnendealer Kaffee Rechner</title>
 
-  <link rel='icon' type='image/png' href='favicon.png'>
-  <link rel='stylesheet' href='global.css'>
-  <link rel='stylesheet' href='bundle.css'>
-</head>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="bundle.css" />
+  </head>
 
-<body>
-  <script src='bundle.js'></script>
-</body>
+  <body>
+    <main class="container mx-auto pt-10">
+      <div class="flex rounded overflow-hidden shadow-lg">
+        <div class="w-1/2">Bohnendealer Kaffee Rechner</div>
+        <div class="w-1/2" id="calculator"></div>
+      </div>
+    </main>
+    <script src="bundle.js"></script>
+  </body>
 </html>

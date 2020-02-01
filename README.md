@@ -7,4 +7,5 @@ Calculate how much Coffee you need within a specific timespan.
 This app is built with Svelte and Tailwind CSS.
 
 `npm install`
+
 `npm run dev`
