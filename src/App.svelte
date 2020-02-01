@@ -7,7 +7,7 @@
   $: sum = numPersons * numCoffees * parseFloat(type) * parseInt(days);
 </script>
 
-<form class="">
+<div class="p-2">
   <div class="flex flex-wrap mb-6">
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label
@@ -76,7 +76,7 @@
         </div>
       </div>
     </div>
-    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-4">
       <label
         class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
         for="grid-weeks"
@@ -112,16 +112,14 @@
       </div>
     </div>
   </div>
-  <div>
-    <div class="text-center py-4 lg:px-4">
-      <div
-        class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
-        role="alert"
+  <div class="text-center">
+    <div
+      class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none rounded-full flex"
+      role="alert"
+    >
+      <span class="flex rounded-full bg-indigo-500 px-2 py-2 font-bold"
+        >{sum}g</span
       >
-        <span class="flex rounded-full bg-indigo-500 px-2 py-2 font-bold"
-          >{sum}g</span
-        >
-      </div>
     </div>
   </div>
-</form>
+</div>
