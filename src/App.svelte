@@ -4,8 +4,7 @@
   let type = "7.5";
   let days = "14";
 
-  let sum =
-    (numPersons * numCoffees * parseFloat(type) * parseInt(days)) / 1000;
+  $: sum = numPersons * numCoffees * parseFloat(type) * parseInt(days);
 </script>
 
 <form class="">
@@ -113,5 +112,16 @@
       </div>
     </div>
   </div>
-  <div>{sum} KG</div>
+  <div>
+    <div class="text-center py-4 lg:px-4">
+      <div
+        class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
+        role="alert"
+      >
+        <span class="flex rounded-full bg-indigo-500 px-2 py-2 font-bold"
+          >{sum}g</span
+        >
+      </div>
+    </div>
+  </div>
 </form>
