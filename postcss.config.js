@@ -1,5 +1,5 @@
 const purgecss = require("@fullhuman/postcss-purgecss")({
-  content: ["./src/**/*.svelte"],
+  content: ["./src/**/*.svelte", "./public/index.html"],
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 });
 
@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     require("tailwindcss"),
     require("autoprefixer"),
-    ...(process.env.NODE_ENV === "production" ? [purgecss] : [])
+    purgecss
+    //...(process.env.NODE_ENV === "production" ? [purgecss] : [])
   ]
 };
