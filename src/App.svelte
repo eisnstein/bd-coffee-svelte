@@ -4,21 +4,25 @@
   let type = "7.5";
   let days = "14";
 
-  $: sum = numPersons * numCoffees * parseFloat(type) * parseInt(days);
+  $: sum14 = numPersons * numCoffees * parseFloat(type) * 14;
+  $: sum21 = numPersons * numCoffees * parseFloat(type) * 21;
+  $: sum28 = numPersons * numCoffees * parseFloat(type) * 28;
+  $: sum42 = numPersons * numCoffees * parseFloat(type) * 42;
+  $: sum56 = numPersons * numCoffees * parseFloat(type) * 56;
 </script>
 
-<div class="p-2">
+<div class="px-4 py-8">
   <div class="flex flex-wrap mb-6">
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label
-        class="block tracking-wide text-gray-700 text-xs font-bold mb-2"
+        class="block tracking-wide text-gray-700 text-sm mb-2"
         for="grid-first-name"
       >
         Anzahl der Kaffeetrinker
       </label>
       <input
         bind:value="{numPersons}"
-        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+        class="appearance-none block w-full bg-white text-gray-700 border border-gray-400 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
         id="grid-first-name"
         min="0"
         placeholder="Jane"
@@ -28,13 +32,13 @@
     </div>
     <div class="w-full md:w-1/2 px-3">
       <label
-        class="block tracking-wide text-gray-700 text-xs font-bold mb-2"
+        class="block tracking-wide text-gray-700 text-sm mb-2"
         for="grid-last-name"
       >
         Anzahl Kaffees / Person / Tag
       </label>
       <input
-        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+        class="appearance-none block w-full bg-white text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
         id="grid-last-name"
         type="number"
         placeholder="Doe"
@@ -45,14 +49,14 @@
   <div class="flex flex-wrap">
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label
-        class="block  tracking-wide text-gray-700 text-xs font-bold mb-2"
+        class="block tracking-wide text-gray-700 text-sm mb-2"
         for="grid-state"
       >
         Bevorzugte Zubereitunsart
       </label>
       <div class="relative">
         <select
-          class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          class="block appearance-none w-full bg-white border border-gray-400 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           id="grid-state"
           bind:value="{type}"
         >
@@ -76,50 +80,37 @@
         </div>
       </div>
     </div>
-    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-4">
-      <label
-        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-        for="grid-weeks"
-      >
-        Wochen
-      </label>
-      <div class="relative">
-        <select
-          class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          id="grid-weeks"
-          bind:value="{days}"
-        >
-          <option value="14">2 Wochen</option>
-          <option value="21">3 Wochen</option>
-          <option value="28">4 Wochen</option>
-          <option value="35">5 Wochen</option>
-          <option value="42">6 Wochen</option>
-          <option value="56">8 Wochen</option>
-        </select>
-        <div
-          class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-        >
-          <svg
-            class="fill-current h-4 w-4"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
   </div>
-  <div class="text-center">
-    <div
-      class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none rounded-full flex"
-      role="alert"
-    >
-      <span class="flex rounded-full bg-indigo-500 px-2 py-2 font-bold"
-        >{sum}g</span
-      >
-    </div>
+  <div class="pt-8">
+    <table class="table-fixed">
+      <thead>
+        <tr>
+          <th class="w-3/4 px-4 py-2">Anzahl der Wochen</th>
+          <th class="w-1/4 px-4 py-2">Kaffee</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="w-3/4 px-4 py-2">in 2 Wochen</th>
+          <th class="w-1/4 px-4 py-2">{sum14}g</th>
+        </tr>
+        <tr>
+          <th class="w-3/4 px-4 py-2">in 3 Wochen</th>
+          <th class="w-1/4 px-4 py-2">{sum21}g</th>
+        </tr>
+        <tr>
+          <th class="w-3/4 px-4 py-2">in 4 Wochen</th>
+          <th class="w-1/4 px-4 py-2">{sum28}g</th>
+        </tr>
+        <tr>
+          <th class="w-3/4 px-4 py-2">in 6 Wochen</th>
+          <th class="w-1/4 px-4 py-2">{sum42}g</th>
+        </tr>
+        <tr>
+          <th class="w-3/4 px-4 py-2">in 8 Wochen</th>
+          <th class="w-1/4 px-4 py-2">{sum56}g</th>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
