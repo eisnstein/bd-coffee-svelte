@@ -11,10 +11,10 @@
   <div class="flex flex-wrap mb-6">
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label
-        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        class="block tracking-wide text-gray-700 text-xs font-bold mb-2"
         for="grid-first-name"
       >
-        Anzahl Personen
+        Anzahl der Kaffeetrinker
       </label>
       <input
         bind:value="{numPersons}"
@@ -28,10 +28,10 @@
     </div>
     <div class="w-full md:w-1/2 px-3">
       <label
-        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        class="block tracking-wide text-gray-700 text-xs font-bold mb-2"
         for="grid-last-name"
       >
-        Anzahl Kaffe Pro Tag
+        Anzahl Kaffees / Person / Tag
       </label>
       <input
         class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -45,10 +45,10 @@
   <div class="flex flex-wrap">
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label
-        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        class="block  tracking-wide text-gray-700 text-xs font-bold mb-2"
         for="grid-state"
       >
-        Zubereitungsart
+        Bevorzugte Zubereitunsart
       </label>
       <div class="relative">
         <select
@@ -56,10 +56,10 @@
           id="grid-state"
           bind:value="{type}"
         >
-          <option value="7.5">Frensh Press</option>
-          <option value="9">Filter</option>
           <option value="10.5">Vollautomat</option>
           <option value="10">Siebträger</option>
+          <option value="9">Filterkaffee</option>
+          <option value="7.5">French-Press</option>
         </select>
         <div
           class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
