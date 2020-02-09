@@ -89,7 +89,7 @@
   <div class="px-3">
     <div class="flex">
       <label class="tracking-wide text-gray-700 text-sm mb-2" for="result">
-        Lieferinterval
+        Lieferintervall
       </label>
       <span class="w-full text-gray-700 text-sm text-right">
         <span
