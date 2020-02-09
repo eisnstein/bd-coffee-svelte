@@ -1,19 +1,21 @@
 <script>
   let countP = 1;
   let countC = 1;
-  let type = "7.5";
+  let type = "10.5";
   let days = "14";
 
+  const limit = 2.25;
+
   $: sum14 = ((countP * countC * parseFloat(type) * 14) / 1000).toFixed(2);
-  $: noCost14 = sum14 >= 2.0;
+  $: noCost14 = sum14 >= limit;
   $: sum21 = ((countP * countC * parseFloat(type) * 21) / 1000).toFixed(2);
-  $: noCost21 = sum21 >= 2.0;
+  $: noCost21 = sum21 >= limit;
   $: sum28 = ((countP * countC * parseFloat(type) * 28) / 1000).toFixed(2);
-  $: noCost28 = sum28 >= 2.0;
+  $: noCost28 = sum28 >= limit;
   $: sum42 = ((countP * countC * parseFloat(type) * 42) / 1000).toFixed(2);
-  $: noCost42 = sum42 >= 2.0;
+  $: noCost42 = sum42 >= limit;
   $: sum56 = ((countP * countC * parseFloat(type) * 56) / 1000).toFixed(2);
-  $: noCost56 = sum56 >= 2.0;
+  $: noCost56 = sum56 >= limit;
 </script>
 
 <div class="px-4 py-8">
