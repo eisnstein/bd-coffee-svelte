@@ -68,7 +68,7 @@
           bind:value="{type}"
         >
           <option value="10.5">Vollautomat</option>
-          <option value="10">Siebträger</option>
+          <option value="13">Siebträger</option>
           <option value="9">Filterkaffee</option>
           <option value="7.5">French-Press</option>
         </select>
